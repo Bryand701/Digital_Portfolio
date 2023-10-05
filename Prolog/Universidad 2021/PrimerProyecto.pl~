@@ -1,0 +1,109 @@
+/*Bryand Brenes Zúñiga 2018093347 */
+
+/*Ejercicio 1*/
+
+max(X,Y,X) :- X>=Y.
+max(X,Y,Y) :- X<Y.
+
+/*Ejercicio 2*/
+
+maxList([X],X).
+maxList([X,Y|Resto],Max):-
+    maxList([Y|Resto],MaxResto),
+    max(X,MaxResto,Max).
+
+/*Ejercicio 3*/
+
+suma(X,Y,Z):- Z is X+Y.
+
+sumList([X],X).
+sumList([X,Y|Resto],Suma):-
+    sumList([Y|Resto],SumaResto),
+    suma(X,SumaResto,Suma).
+
+/*Ejercicio 4*/
+
+orden(X,Y) :- X=<Y.
+
+ordenada([]).
+ordenada([_]).
+ordenada([X,Y|Resto]) :-
+    orden(X,Y),
+    ordenada([Y|Resto]).
+
+/*Ejercicio 5*/
+
+orden2(X,Y) :- X>=Y.
+
+ordenada2([],'a').
+ordenada2([_],'a').
+ordenada2([X,Y|Resto],'a') :-
+    orden(X,Y),
+    ordenada2([Y|Resto],'a').
+
+ordenada2([],'d').
+ordenada2([_],'d').
+ordenada2([X,Y|Resto],'d') :-
+    orden2(X,Y),
+    ordenada2([Y|Resto],'d').
+
+/*Ejercicio 6 incompleto*/
+
+subSSum([_]).
+subSSum([X],X).
+subSSum([X],Suma,[Sub]):- X=:=Suma,append([Sub],[X]) .
+subSSum([X|Y],Suma,[Sub]) :-
+    sumList([X|Y],Z),
+    Z =:= Suma,append([Sub],[X|Y]).
+
+
+sublist([],[]).
+
+sublist([First|Rest],[First|Sub]):-
+    sublist(Rest,Sub).
+sublist([_|Rest],Sub):-
+    sublist(Rest,Sub).
+
+allSubList([First|Rest],X):-
+    findall(Z,sublist([First|Rest],Z),X).
+
+listLength([],0).
+listLength([_|Tail],N) :- listLength(Tail,N1), N is N1+1.
+
+
+/*fuente del findall https://www.swi-prolog.org/pldoc/doc_for?object=findall/4*/
+
+/*fuente del algoritmo de sublist https://www.codepoc.io/blog/prolog/5069/prolog-program-to-find-sublists-of-the-given-list*/
+
+subSum([X|Y],Suma,Sub):-
+    allSubList([X|Y],SubList),
+    subSumAux(SubList,Suma,Sub).
+
+subSumAux([_],0,[_|_]).
+subSumAux([X|Y],Suma,Sub):-
+    subSumAux(Y,Suma,Sub),
+    subSSum(X,Suma,Sub).
+
+/*Ejercicio 7*/
+
+
+/*entre(N1,N2, X) :-
+    N1 < N2,
+    N3 is N1+1,
+    X is N1,
+    entre(N3,N2, X).
+
+entre(N1,N2, X ) :-
+    N1 =< N2,
+    X is N1.*/
+
+entre(N1,N2,X) :- between(N1,N2,X).
+
+/*Si hago pruebas sobre el entre que está comentado y el entre con el between
+nativo de prolog me da solamente el primer resultado, desconosco el por qué*/
+
+entreL(N1,N1,[N1]).
+entreL(N1,N2,[N1|Resto]) :-
+    N1 < N2,
+    N3 is N1 + 1,
+    entreL(N3,N2,Resto).

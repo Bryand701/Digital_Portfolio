@@ -1,0 +1,10 @@
+ld R1,R2(R0)
+ldi R2,1
+and R3,R2,R1
+teste R2,R3
+jc impar
+ ldi R2,3
+ add R1,R1,R2
+ jmp continue
+impar: ldi R2,6
+ sub R1,R1,R2
