@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<script src="script.js"></script>
+	<head>
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="style.css">
+		<title>Encriptador/Desencriptador</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+
+		<header>
+			<h1>Encriptador/Desencriptador</h1>
+		</header>		
+
+		<label for="texto">Introduce el texto a encriptar/desencriptar:</label>
+		<textarea c id="texto" cols="50" rows="5"></textarea><br>
+		<button onclick="encriptar()">Encriptar</button>
+		<button onclick="desencriptar()">Desencriptar</button>
+		<label for="resultado">Resultado:</label>
+		<textarea id="resultado" cols="50" rows="5"></textarea><br>		
+		<button onclick="copiarResultado()">Copiar y limpiar</button><br>
+		<img class="contenedor" src="Imagenes/AluraLogo.jpg" alt="Imagen">	
+		
+	</body>
+</html>

@@ -1,0 +1,60 @@
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #dbe5f0;
+    background: linear-gradient(#dbe5f0, #005ac2);
+    font-size: 20px;
+    padding: 2%;
+    display: block;
+
+
+}
+header {
+    color: #1c4966;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #1c4966;
+    display: block;
+    
+
+}
+input[type="text"], textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    width: 40%;
+    margin-bottom: 10px;
+    background-color: #f0f5fa;
+    color: #1c4966;
+    display: block;
+}
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2c3e50;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+

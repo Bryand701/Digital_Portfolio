@@ -1,0 +1,24 @@
+001:	new FractalSiluetas(400, 600, -90, 11, 11, 8.0, 2, 1, false, -8, 30, 0).setVisible(true)
+
+002:	new FractalSiluetas(400, 600, -90, 5, 5, 25.0, 2, 0, true, -95, 45, 0).setVisible(true);
+
+003: 	new FractalSiluetas(400, 600, -90, 10, 10, 7.0, 4, 0, false, -48.6, 59.6, 0).setVisible(true);
+
+004:	new FractalSiluetas(400, 600, -90, 8, 8, 10, 2, 0, true, -45, 29.6, 16).setVisible(true);
+
+005:	new FractalSiluetas(400, 600, -90, 4,4, 35, 1, 0, true, -120, 0, 120).setVisible(true);
+
+006:	new FractalSiluetas(400, 600, -90, 5,5, 25, 2, 0, true, -120, 0, 120).setVisible(true);
+
+007: 	new FractalSiluetas(400, 600, -90, 7,7, 9, 2, 0, true, -62, -35, -10).setVisible(true);
+
+008: 	new FractalSiluetas(400, 600, -90, 9,9, 11, 1, 0, false, 20, -20, 0).setVisible(true);
+
+009: 	new FractalSiluetas(400, 600, -90, 9,9, 8, 3, 0, false, 10, -10, 0).setVisible(true);
+
+010:	new FractalSiluetas(400, 600, -90, 4,4, 36, 1, 1, true, 50, -30, 0).setVisible(true);
+
+Otras formas:
+
+001: new FractalSiluetas(400, 600, -90, 8, 8, 10, 2, 0, true, -120, 0, 120).setVisible(true);
+
